@@ -1,0 +1,3 @@
+.http-server.log
+.playwright-mcp/
+.DS_Store

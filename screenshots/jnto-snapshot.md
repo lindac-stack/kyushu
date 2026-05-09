@@ -1,0 +1,31 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]
+      - text:    
+      - generic [ref=e33]
+      - generic:    
+    - generic [ref=e52]:
+      - generic [ref=e54]
+      - list [ref=e64]
+      - generic [ref=e74]
+      - generic [ref=e214]
+      - generic [ref=e258]
+      - generic [ref=e271]
+      - generic [ref=e335]
+      - generic [ref=e370]
+      - generic [ref=e452]
+    - generic [ref=e532]:
+      - generic [ref=e534]
+      - generic [ref=e563]
+      - generic [ref=e580]
+  - generic [ref=e587] [cursor=pointer]:
+    - generic [ref=e588]: 
+    - generic [ref=e589]: What is the primary reason to visit this site today?
+  - generic:
+    - generic:
+      - generic
+  - dialog "Privacy" [ref=e599]:
+    - generic [ref=e601]:
+      - generic [ref=e602]
+      - generic [ref=e626]
