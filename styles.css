@@ -716,11 +716,12 @@ h3 {
 .ptl-day::before {
   content: "";
   position: absolute;
-  left: 50px;
-  top: 38px;
+  left: 54px;
+  top: 0;
   bottom: -28px;
   width: 2px;
   background: var(--rule);
+  z-index: 0;
 }
 .ptl-day:last-child::before { display: none; }
 
@@ -729,6 +730,8 @@ h3 {
   flex-direction: column;
   align-items: center;
   padding-top: 6px;
+  position: relative;
+  z-index: 1;
 }
 .ptl-num {
   width: 56px;
@@ -743,6 +746,15 @@ h3 {
   justify-content: center;
   letter-spacing: 0.02em;
   box-shadow: 0 2px 8px rgba(192, 57, 43, 0.25);
+  position: relative;
+  z-index: 2;
+}
+.ptl-loc {
+  background: var(--bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
 }
 .ptl-loc {
   margin-top: 8px;
