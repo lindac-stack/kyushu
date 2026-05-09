@@ -135,6 +135,40 @@ a:hover { text-decoration: underline; }
   font-size: 12px;
   letter-spacing: 0.06em;
 }
+.hero-logo {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  z-index: 2;
+  padding: 6px 14px 6px 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+.hero-logo img {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+.hero-logo span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.hero-logo:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 540px) {
+  .hero-logo { top: 12px; left: 14px; padding: 4px 12px 4px 4px; }
+  .hero-logo img { width: 30px; height: 30px; }
+  .hero-logo span { font-size: 12px; }
+}
 .hero-text {
   position: absolute;
   left: 0; right: 0; bottom: 60px;
@@ -994,4 +1028,93 @@ h3 {
   .topnav nav { display: none; }
   .hero { height: 340px; }
   .util-bar { display: none; }
+}
+
+/* mobile / iPhone */
+@media (max-width: 540px) {
+  .container { padding: 0 14px 64px; }
+  .hero { height: 280px; }
+  .hero-text { padding: 0 16px; bottom: 32px; }
+  .hero h1 { font-size: 44px; }
+  .hero-lede { font-size: 15px; }
+
+  section { padding: 36px 0 16px; }
+  h2 { font-size: 22px; margin-bottom: 18px; }
+
+  .intro { gap: 20px; }
+  .intro-body p { font-size: 15px; }
+  .quick { padding: 16px 18px; }
+
+  /* budget tree — stack rows */
+  .budget-tree { padding: 16px 14px; font-size: 14px; }
+  .tree li {
+    grid-template-columns: 1fr;
+    padding: 10px 0 10px 16px;
+    gap: 2px;
+  }
+  .tree li::before { top: 18px; width: 10px; }
+  .tree ul { padding-left: 14px; margin-left: 4px; }
+  .tree-amount { font-size: 13px; text-align: left; }
+  .tree-amount--big { font-size: 18px; }
+  .tree-note { font-size: 11px; }
+  .tree-root > .tree-label { font-size: 16px; }
+
+  /* photo timeline */
+  .ptl-day { grid-template-columns: 64px 1fr; gap: 10px; margin-bottom: 22px; }
+  .ptl-day::before { left: 30px; }
+  .ptl-num { width: 44px; height: 44px; font-size: 13px; }
+  .ptl-loc { font-size: 11px; }
+  .ptl-content { padding: 14px 14px; }
+  .ptl-content h3 { font-size: 15px; margin-bottom: 10px; }
+  .ptl-shots { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .ptl-shot { height: 130px; }
+  .ptl-name { font-size: 13px; }
+  .ptl-shot figcaption { padding: 18px 10px 8px; }
+  .ptl-cap { font-size: 10px; }
+  .ptl-list { grid-template-columns: 1fr; font-size: 13px; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .site-thumbs { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .site-thumb img { height: 72px; }
+  .site-title { padding: 8px 10px; font-size: 12px; }
+  .site-url { font-size: 9px; }
+
+  /* prefecture / highlight / food / season grids — single column */
+  .pref-grid,
+  .hl-grid,
+  .food-grid,
+  .season-grid,
+  .ds-grid { grid-template-columns: 1fr; }
+  .pref-img { height: 100px; font-size: 22px; }
+
+  /* waterfall */
+  .wf-step {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-left: 0 !important;
+    padding: 12px 14px;
+  }
+  .wf-day { font-size: 12px; }
+  .wf-place { font-size: 14px; }
+  .wf-note { font-size: 13px; }
+  .alt-list li { font-size: 12.5px; }
+
+  /* maps padding tighter */
+  .map-wrap, .hotel-wrap, .tl-wrap, .pref-map-wrap { padding: 12px; }
+
+  /* hl badges should stay aligned */
+  .hl-card--hl > .hl-badge,
+  .hl-card--pending > .hl-badge,
+  .season-card--hl > .hl-badge { top: 12px; right: 12px; }
+
+  /* footer */
+  .foot-inner { padding: 0 16px; font-size: 12px; }
+}
+
+/* very small / SE */
+@media (max-width: 360px) {
+  .hero h1 { font-size: 36px; }
+  .ptl-shots { grid-template-columns: 1fr; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .site-thumbs { grid-template-columns: 1fr; }
+  .ptl-shot { height: 160px; }
 }
